@@ -101,7 +101,7 @@ pre {
                 var targetLanguage = languageSelect.options[languageSelect.selectedIndex].value;
 
                 // Make a request to the backend API for code conversion
-                fetch('http://localhost:3000/convert', {
+                fetch('https://code-wg14.onrender.com/convert', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -122,7 +122,7 @@ pre {
                 var code = editor.getValue();
 
                 // Make a request to the backend API for code debugging
-                fetch('http://localhost:3000/debug', {
+                fetch('https://code-wg14.onrender.com/debug', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -142,7 +142,7 @@ pre {
                 var code = editor.getValue();
 
                 //Make a request to the backend API for code quality check
-                fetch('http://localhost:3000/qualitycheck', {
+                fetch('https://code-wg14.onrender.com/qualitycheck', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
