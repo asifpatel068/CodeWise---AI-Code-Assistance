@@ -5,7 +5,9 @@
     <title>Code Conversion, Debugging, and Quality Check Application</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.27.0/min/vs/editor/editor.main.min.css" />
     <style>
-      .container {
+/* Default styles */
+
+.container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -16,7 +18,7 @@
 
 h1 {
     color: #333;
-    font-size: 28px;
+    font-size: 22px;
     margin-bottom: 20px;
 }
 
@@ -61,11 +63,32 @@ pre {
     font-size: 14px;
 }
 
+/* Media query for mobile screens */
+
+@media (max-width: 767px) {
+    .container {
+        padding: 10px;
+    }
+
+    #editor {
+        height: 300px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Code Conversion, Debugging, and Quality Check Application</h1>
+        <h1>Application  </h1> <h3> for Code Conversion, Debugging, and Quality Check</h3>
         <div id="editor"></div>
         <div>
             <select id="languageSelect">
@@ -90,7 +113,7 @@ pre {
         require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.27.0/min/vs' }});
         require(['vs/editor/editor.main'], function() {
             var editor = monaco.editor.create(document.getElementById('editor'), {
-                value: '',
+                value: '// Write the code here\n',
                 language: 'javascript',
                 theme: 'vs-dark'
             });
